@@ -1,3 +1,32 @@
-*{
-  
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 30vh;
+  width: 87vw;
+  box-shadow: 3px 3px 15px black;
+  border-radius: 20px;
+}
+.ele {
+  margin: 4px;
+}
+#btn {
+  margin: 3vh;
+  padding: 16px;
+  border: none;
+  border-radius: 2rem;
+  box-shadow: 2px 2px 8px rgba(0,0,0,.3);
+}
+#emoji{
+  font-size: 2.5rem;
 }

@@ -36,13 +36,21 @@ const loadEmojis = async() => {
 // Print Emoji on the Screen
 
 const printEmojis = async () => {
-  if(emojis.length === 0){
+  btn.disabled= true
+  name.innerText = "Please Wait..."
+   if(emojis.length === 0){
     await loadEmojis();
   }
   const num = Math.floor(Math.random() * emojis.length);
+  try{
   emoji.innerText = emojis[num].character;
   name.innerText = emojis[num].unicodeName;
-  console.log(emojis[num])
+  }
+  catch(error){
+    name.innerText = "Please check your internet and Try Again"
+    btn.innerText = "Try again"
+  }
+  btn.disabled= false
 }
 
 btn.addEventListener("click", printEmojis)
