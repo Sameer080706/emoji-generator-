@@ -2,13 +2,11 @@ const emoji = document.getElementById("emoji");
 const name = document.getElementById("name");
 const btn = document.getElementById("btn")
 let emojis = []
-
+let retries = 0;
+let maxRetries = 3
 
 // Load Emojis and store an object 
 const loadEmojis = async() => {
-  
-  let retries = 0;
-  let maxRetries = 3
   
   try {
   const data =
