@@ -2,12 +2,11 @@ const emoji = document.getElementById("emoji");
 const name = document.getElementById("name");
 const btn = document.getElementById("btn")
 let emojis = []
-let retries = 0;
-let maxRetries = 3
-
+const maxRetries = 3;
 // Load Emojis and store an object 
 const loadEmojis = async() => {
-  
+ 
+ for(let retries = 0; retries < maxRetries; retries++){
   try {
   const data =
   await
@@ -16,19 +15,13 @@ const loadEmojis = async() => {
   const response = await data.json();
   emojis = response;
   
+  return; 
  // console.log(emojis)
   }
-  catch(error){
-    
-    setTimeout(() =>{
-      loadEmojis();
-    },1000)
-    
-    retries += 1;
-    if(retries > maxRetries){
-      return;
-    }
-  }
+  catch(e){
+    console.log(e)
+}}
+name.innerText = "Please check your internet and Try Again"
 }
 
 // Print Emoji on the Screen
@@ -48,6 +41,7 @@ const printEmojis = async () => {
     name.innerText = "Please check your internet and Try Again"
     btn.innerText = "Try again"
   }
+  btn.innerText = "Get another"
   btn.disabled= false
 }
 
