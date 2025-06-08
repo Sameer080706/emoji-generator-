@@ -35,7 +35,7 @@ const printEmojis = async () => {
   const num = Math.floor(Math.random() * emojis.length);
   try{
   emoji.innerText = emojis[num].character;
-  name.innerText = emojis[num].unicodeName;
+  name.innerText = emojis[num].unicodeName.toUpperCase();
   }
   catch(error){
     name.innerText = "Please check your internet and Try Again"
