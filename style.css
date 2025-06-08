@@ -18,17 +18,20 @@ body {
   flex-direction: column;
   box-shadow: 3px 3px 15px black;
   border-radius: 20px;
+  text-align: center;
 }
 .ele {
   margin: 17px;
   flex-grow: 1;
+  
 }
 #btn {
   margin: 3vh;
   padding: 18px;
+  font-size: 1rem;
   border: none;
   border-radius: 2rem;
-  box-shadow: 2px 2px 8px rgba(0,0,0,.3);
+  box-shadow: 3px 3px 8px rgba(0,0,0,.3);
 }
 #emoji{
   font-size: 3rem;
