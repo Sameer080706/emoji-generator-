@@ -8,12 +8,14 @@ body {
   place-items: center;
 }
 .container {
+  max-width: 20vw;
+  min-width: 80vw;
+  max-height: 40vh;
+  min-height: 30vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 30vh;
-  width: 87vw;
   box-shadow: 3px 3px 15px black;
   border-radius: 20px;
 }
@@ -23,11 +25,14 @@ body {
 }
 #btn {
   margin: 3vh;
-  padding: 16px;
+  padding: 18px;
   border: none;
   border-radius: 2rem;
   box-shadow: 2px 2px 8px rgba(0,0,0,.3);
 }
 #emoji{
   font-size: 3rem;
+}
+#name{
+  font-size: 1.2rem;
 }
