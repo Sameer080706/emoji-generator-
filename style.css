@@ -43,6 +43,8 @@ body {
   .container{
     max-width: 89vw;
     min-width: 46vw;
+    min-height: 20vh;
+    max-height: 34vh;
   }
   
 }
