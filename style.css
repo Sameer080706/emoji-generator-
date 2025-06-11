@@ -39,7 +39,7 @@ body {
 #name{
   font-size: 1.2rem;
 }
-@media(min-width: 500px){
+@media(min-width: 600px){
   .container{
     max-width: 89vw;
     min-width: 46vw;
