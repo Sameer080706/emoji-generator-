@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 .loader {
     height: 50px;
@@ -42,7 +43,7 @@ body {
     border-radius: 50vh;
     border: none;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-    background-color: #ffffff40;
+    background-color: #fdebeb2e;
 }
 #emoji {
     font-size: 3rem;

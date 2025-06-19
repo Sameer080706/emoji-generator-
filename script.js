@@ -24,6 +24,7 @@ const loadEmojis = async () => {
             const response = await data.json();
             emojis = response;
             btn.disabled = false;
+            emoji.innerText = "👍";
             name.innerText = "Go... Get Emoji";
             removeLoad();
             return;
@@ -52,12 +53,13 @@ const printEmojis = async () => {
         name.innerText = emojis[num].unicodeName.toUpperCase();
         btn.innerText = "Get another";
         btn.disabled = false;
-    } catch (error) {
+    } 
+    catch (e) {
         removeLoad();
         name.innerText = "Please check your internet and Try Again";
         btn.innerText = "Try again";
+        console.log(e)
     }
-    
 };
 loadEmojis();
 btn.addEventListener("click", printEmojis);
